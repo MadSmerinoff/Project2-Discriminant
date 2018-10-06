@@ -1,0 +1,56 @@
+//WCMN Project 2
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    double a; //First Constant
+    double b; //Second Constant
+    double c; //Third Constant
+    double D; //Discriminant
+    double r1; //Solution 1
+    double r2; //Solution 2
+    
+    //Entering the Constants
+    cout<<"This Program is Designed to Compute the Roots of a Quadratic Equation."<<endl;
+    cout<<"Enter the Constants of the Equation Below: "<<endl;
+    cout<<"----------------------------------------------------------------------"<<endl;
+    cout<<"Enter the constant multiplying (x^2): ";
+    cin>>a;
+    cout<<"Enter the constant multiplying (x): ";
+    cin>>b;
+    cout<<"Enter the Final Constant: ";
+    cin>>c;
+    
+    //Determining the Descriminant
+    D=pow(b,2)-(4*(a)*(c));
+    
+    if (D > 0)
+    {
+        cout<<"----------------------------------------------------------------------"<<endl;
+        cout<<"Discriminant is Equal To: "<<D<<endl;
+        cout<<"The Equation has two real and different solutions"<<endl;
+        r1=(((-b)+sqrt(D))/2*a);
+        r2=(((-b)-sqrt(D))/2*a);
+        cout<<"The solutions are: "<<r1;
+        cout<<", "<<r2;
+    }
+    
+    else if (D == 0)
+    {
+        cout<<"----------------------------------------------------------------------"<<endl;
+        cout<<"Discriminant is Equal To: "<<D<<endl;
+        cout<<"The Equation has a single real solution with multiplicity 2"<<endl;
+        r1=(((-b)+sqrt(D))/2*a);
+        cout<<"The Solution is: "<<r1;
+    }
+    else if (D < 0)
+    {
+        cout<<"----------------------------------------------------------------------"<<endl;
+        cout<<"Discriminant is Equal To: "<<D<<endl;
+        cout<<"The Equation has Two Different Complex (Imaginary) Solutions"<<endl;
+    }
+        
+    return 0;
+}
